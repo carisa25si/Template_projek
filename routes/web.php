@@ -1,20 +1,19 @@
+
 <?php
 
+use App\Http\Controllers\QuestionController;
+use app\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\Controller.php;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('question/store', [QuestionController::class, 'store'])
-		->name('question.store');
-
-Route::get('/', function () {
+Route::get('/question', function () {
     return view('home');
 });
 
+Route::post('/question/store', [QuestionController::class, 'store'])
+    ->name('question.store');
 
-<h5 class="card-title">Form Pertanyaan</h5>
-<form action="{{ route('question.store') }}" method="POST">
-	@csrf
+Route: :get('dashboard', [DashboardController::class, 'index'])->name ('dashboard');
