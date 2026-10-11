@@ -110,7 +110,13 @@
 </head>
 <body>
   <aside class="sidebar" id="sidebar">
-    <div class="brand"><i class="bi bi-grid-1x2-fill me-2" style="color:var(--primary)"></i>Joymaker<span>.</span></div>
+    <div class="brand"><div class="brand">
+    <img src="{{ asset('images/brand/logo/joymaker.png') }}" 
+         width="24" 
+         height="24" 
+         class="me-2">
+    Joymaker<span>.</span>
+</div>
     <div class="nav-caption">Menu utama</div>
     <a class="side-link active" href="#"><i class="bi bi-house-door"></i>Dashboard</a>
     <a class="side-link" href="#orders"><i class="bi bi-bag"></i>Orders</a>
@@ -141,8 +147,8 @@
       <section class="welcome mb-4">
         <div>
           <h1 class="h2 fw-bold mb-0">👋 Hello Admin</h1>
-          <p>Selamat datang di E-commerce Dashboard! Pantau penjualan, lacak perkembangan toko, dan temukan insight penting dari bisnismu.</p>
-          <a href="#revenue" class="btn btn-light text-primary"><i class="bi bi-stars me-2"></i>Start AI</a>
+          <p>Selamat datang di Dashboard! Pantau penjualan, lacak perkembangan toko, dan temukan insight penting dari joymaker.</p>
+          <a href="#revenue" class="btn btn-light text-primary"><i class="bi bi-stars me-2"></i>Start</a>
         </div>
         <div class="welcome-art"><i class="bi bi-bar-chart-line"></i></div>
       </section>
