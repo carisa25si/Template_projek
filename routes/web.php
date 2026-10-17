@@ -1,9 +1,11 @@
-
 <?php
 
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\GuestController;
+use App\Http\Controllers\PelangganController;
+use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\DiskonController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -19,7 +21,15 @@ Route::get('/question', function () {
 Route::post('/question/store', [QuestionController::class, 'store'])->name('question.store');
 
 // route admin
-Route::get('/admin',[AdminController::class,'index']);
+Route::get('/admin',[AdminController::class,'index'])->name('dashboard');
+
+// route resource admin (CRUD): URL /admin/pelanggan, /admin/produk, /admin/diskon
+// nama route tetap: pelanggan.index, produk.create, diskon.edit, dst.
+Route::prefix('admin')->group(function () {
+    Route::resource('pelanggan', PelangganController::class);
+    Route::resource('produk', ProdukController::class);
+    Route::resource('diskon', DiskonController::class);
+});
 
 //route guest
 Route::get('/guest',[GuestController::class,'index']);

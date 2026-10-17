@@ -111,18 +111,19 @@
 <body>
   <aside class="sidebar" id="sidebar">
     <div class="brand"><div class="brand">
-    <img src="{{ asset('images/brand/logo/joymaker.png') }}" 
+    <img src="{{ asset('adminassets/images/brand/logo/joymaker.png') }}" 
          width="24" 
          height="24" 
          class="me-2">
     Joymaker<span>.</span>
 </div>
     <div class="nav-caption">Menu utama</div>
-    <a class="side-link active" href="#"><i class="bi bi-house-door"></i>Dashboard</a>
+    <a class="side-link active" href="{{ route('dashboard') }}"><i class="bi bi-house-door"></i>Dashboard</a>
     <a class="side-link" href="#orders"><i class="bi bi-bag"></i>Orders</a>
-    <a class="side-link" href="#products"><i class="bi bi-box-seam"></i>Products</a>
+    <a class="side-link" href="{{ route('produk.index') }}"><i class="bi bi-box-seam"></i>Produk</a>
     <a class="side-link" href="#revenue"><i class="bi bi-graph-up-arrow"></i>Analytics</a>
-    <a class="side-link" href="#customers"><i class="bi bi-people"></i>Customers</a>
+    <a class="side-link" href="{{ route('pelanggan.index') }}"><i class="bi bi-people"></i>Pelanggan</a>
+    <a class="side-link" href="{{ route('diskon.index') }}"><i class="bi bi-percent"></i>Diskon</a>
     <div class="nav-caption mt-3">Pengaturan</div>
     <a class="side-link" href="#"><i class="bi bi-gear"></i>Settings</a>
     <a class="side-link" href="#"><i class="bi bi-question-circle"></i>Help center</a>
