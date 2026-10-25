@@ -1,6 +1,6 @@
 {{-- REFERENSI TEMPLATE (Dasher / Bootstrap 5): bagian Tables -> .table, .table-hover, .table-responsive, .btn-sm (aksi), .alert-success (flash)
      File template: public/adminassets/scss/theme/components/_table.scss, _button.scss, _card.scss --}}
-@extends('admin.layouts.app')
+@extends('layouts.admin.app')
 
 @section('title', 'Data Diskon')
 @section('subtitle', 'List data seluruh diskon')

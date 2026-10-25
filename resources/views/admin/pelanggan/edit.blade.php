@@ -1,6 +1,6 @@
 {{-- REFERENSI TEMPLATE (Dasher / Bootstrap 5): bagian Forms -> .form-label, .form-control, .form-select, .is-invalid + .invalid-feedback, .btn
      File template: public/adminassets/scss/theme/components/_form.scss, _button.scss, _card.scss --}}
-@extends('admin.layouts.app')
+@extends('layouts.admin.app')
 
 @section('title', 'Edit Pelanggan')
 @section('subtitle', 'Form untuk mengubah data pelanggan.')

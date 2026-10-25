@@ -6,6 +6,7 @@ use App\Http\Controllers\GuestController;
 use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\DiskonController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -23,12 +24,13 @@ Route::post('/question/store', [QuestionController::class, 'store'])->name('ques
 // route admin
 Route::get('/admin',[AdminController::class,'index'])->name('dashboard');
 
-// route resource admin (CRUD): URL /admin/pelanggan, /admin/produk, /admin/diskon
+// route resource admin (CRUD): URL /admin/pelanggan, /admin/produk, /admin/diskon, /admin/user
 // nama route tetap: pelanggan.index, produk.create, diskon.edit, dst.
 Route::prefix('admin')->group(function () {
     Route::resource('pelanggan', PelangganController::class);
     Route::resource('produk', ProdukController::class);
     Route::resource('diskon', DiskonController::class);
+    Route::resource('user', UserController::class);
 });
 
 //route guest
