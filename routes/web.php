@@ -34,4 +34,10 @@ Route::prefix('admin')->group(function () {
 });
 
 //route guest
-Route::get('/guest',[GuestController::class,'index']);
+Route::get('/guest',[GuestController::class,'index'])->name('guest');
+
+Route::prefix('guest')->group(function () {
+    Route::resource('login', LoginController::class);
+});
+
+
